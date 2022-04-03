@@ -1,0 +1,14 @@
+<p>all-items works!</p>
+<table>
+  <tr>
+    <th>name</th><th>description</th><th>brands</th> <th>item_condition_id</th> <th>region</th> <th>image</th> <th>current_price</th>
+  </tr>
+  <ng-container *ngFor="let item of items">
+
+    <tr>
+      <td>{{item.name}}</td><td>{{item.description}}</td><td>{{item.brands}}</td><td>{{item.itemConditionId}}</td>
+      <td>{{item.region}}</td><td>image to show</td><td>{{item.currentPrice}}</td>
+    </tr>
+  </ng-container>
+
+</table>

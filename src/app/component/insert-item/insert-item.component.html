@@ -1,0 +1,65 @@
+<p>insert-item works!</p>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <div #nameControl="ngModelGroup" ngModelGroup="item">
+
+
+    <div class="form-group">
+      <label for="userId"> userId </label>
+      <input class="form-control" placeholder="userId" id="userId" type="number" name="userId" [(ngModel)]="item.userId" required>
+    </div>
+
+    <div class="form-group">
+      <label for="name"> name </label>
+      <input class="form-control" placeholder="name" id="name" type="text" name="name" [(ngModel)]="item.name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description"> description </label>
+      <input class="form-control" placeholder="description" id="description" type="text" name="description" [(ngModel)]="item.description" required>
+    </div>
+
+    <div class="form-group">
+      <label for="brands"> brands </label>
+      <input class="form-control" placeholder="brands" id="brands" type="text" name="brands" [(ngModel)]="item.brands" required>
+    </div>
+
+    <div class="form-group">
+      <label for="itemConditionId"> itemConditionId </label>
+      <input class="form-control" placeholder="itemConditionId" id="itemConditionId" type="number" name="itemConditionId" [(ngModel)]="item.itemConditionId" required>
+    </div>
+
+    <div class="form-group">
+      <label for="region"> region </label>
+      <input class="form-control" placeholder="region" id="region" type="text" name="region" [(ngModel)]="item.region" required>
+    </div>
+
+    <div class="form-group">
+      <label for="imageUrl"> imageUrl </label>
+      <input class="form-control" placeholder="imageUrl" id="imageUrl" type="text" name="imageUrl" [(ngModel)]="item.imageUrl" required>
+    </div>
+
+    <div class="form-group">
+      <label for="originPrice"> originPrice </label>
+      <input class="form-control" placeholder="originPrice" id="originPrice" type="number" name="originPrice" [(ngModel)]="item.originPrice" required>
+    </div>
+
+    <div class="form-group">
+      <label for="discount"> discount </label>
+      <input class="form-control" placeholder="discount" id="discount" type="number" name="discount" [(ngModel)]="item.discount" required>
+    </div>
+
+    <div class="form-group">
+      <label for="currentPrice"> currentPrice </label>
+      <input class="form-control" placeholder="currentPrice" id="currentPrice" type="number" name="currentPrice" [(ngModel)]="item.currentPrice" required>
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+  <button class="btn btn-primary btn-lg btn-block" type="submit"  [disabled]="!myForm.valid">Insert</button>
+</form>

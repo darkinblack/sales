@@ -1,0 +1,22 @@
+<p>insert-item works!</p>
+<ngb-alert *ngIf="show" [dismissible]="false" >
+  <strong>Error!</strong> Login failed, please check your username and password.
+</ngb-alert>
+
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <div #nameControl="ngModelGroup" ngModelGroup="user">
+
+
+    <div class="form-group">
+      <label for="username"> username </label>
+      <input class="form-control" placeholder="username" id="username" type="text" name="username" value="Krystle Muck" [(ngModel)]="user.username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password"> password </label>
+      <input class="form-control" placeholder="password" id="password" type="password" name="password" value="1e4lPT93ON" [(ngModel)]="user.password" required>
+    </div>
+
+  </div>
+  <button class="btn btn-primary btn-lg btn-block" type="submit"  [disabled]="!myForm.valid">login</button>
+</form>
